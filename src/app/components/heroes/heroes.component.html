@@ -1,0 +1,8 @@
+<p>Hero ID:{{hero.id}}</p>
+<p>Hero Name:{{hero.name | uppercase}}</p>
+
+
+<div>
+    <label for="name">Hero name:</label>
+    <input type="text" name="name" id="name" placeholder="Insira o nome do herói" [(ngModel)]="hero.name">
+</div>
