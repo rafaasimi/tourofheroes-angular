@@ -8,7 +8,6 @@ import IHero from 'src/app/models/heroes.model';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  hero: IHero;
   heroesList = HEROES;
   selectedHero?: IHero;
 
