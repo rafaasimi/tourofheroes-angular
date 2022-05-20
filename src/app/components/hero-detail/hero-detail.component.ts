@@ -4,14 +4,12 @@ import IHero from 'src/app/models/heroes.model';
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.scss']
+  styleUrls: ['./hero-detail.component.scss'],
 })
 export class HeroDetailComponent implements OnInit {
-  @Input() hero?: IHero
-  
-  constructor() { }
+  @Input() hero?: IHero;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

@@ -1,0 +1,10 @@
+.heroes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 18px;
+
+    mat-card {
+        width: 24%;
+    }
+}

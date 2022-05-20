@@ -21,4 +21,16 @@ export const HEROES: IHero[] = [
     id: 5,
     name: 'Hulk',
   },
+  {
+    id: 6,
+    name: 'Wolverine',
+  },
+  {
+    id: 7,
+    name: 'Capitão América',
+  },
+  {
+    id: 8,
+    name: 'Mulher Maravilha',
+  },
 ];

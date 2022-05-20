@@ -14,7 +14,7 @@ export class HeroService {
   getHeroes(): Observable<IHero[]> {
     const heroes = of(HEROES);
 
-    this.messageService.add(`[${getCurrentDateAndTime()}] - Hero list loaded.`)
+    this.messageService.add(`[${getCurrentDateAndTime()}] - Hero list loaded.`);
 
     return heroes;
   }

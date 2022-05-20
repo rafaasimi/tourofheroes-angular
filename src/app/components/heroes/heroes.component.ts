@@ -24,8 +24,11 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: IHero): void {
     this.selectedHero = hero;
-    this.messageService.add(`[${getCurrentDateAndTime()}] - The hero "${hero.name} (${hero.id})" has been selected.`)
-
+    this.messageService.add(
+      `[${getCurrentDateAndTime()}] - The hero "${hero.name} (${
+        hero.id
+      })" has been selected.`
+    );
   }
 
   getHeroes(): void {
