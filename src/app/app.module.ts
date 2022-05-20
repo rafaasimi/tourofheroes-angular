@@ -12,6 +12,7 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationMenuTopComponent } from './components/navigation-menu-top/navigation-menu-top.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     MatToolbarModule,
     MatButtonModule,
     MatExpansionModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
