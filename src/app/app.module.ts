@@ -8,7 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail/hero-detail.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationMenuTopComponent } from './components/navigation-menu-top/navigation-menu-top.component';
 import { MessagesComponent } from './components/messages/messages.component';
