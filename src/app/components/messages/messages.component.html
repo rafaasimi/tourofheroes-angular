@@ -1,0 +1,23 @@
+<div>
+    <h2>Messages:</h2>
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Audit messages
+            </mat-panel-title>
+            <mat-panel-description>
+                Messages ({{messageService.getMessages().length}})
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngFor="let message of messageService.getMessages()">
+            {{message}}
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<br>
+
+<button mat-raised-button color="warn" (click)="messageService.clear()">Clear Messages</button>
