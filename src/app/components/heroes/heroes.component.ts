@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import IHero from 'src/app/models/heroes.model';
-import { HeroService } from 'src/app/services/hero.service';
-import { MessageService } from 'src/app/services/message.service';
-import getCurrentDateAndTime from 'src/app/utils/getCurrentDateAndTime';
+import IHero from 'src/app/core/models/heroes.model';
+import { HeroService } from 'src/app/core/services/hero.service';
 
 @Component({
   selector: 'app-heroes',
