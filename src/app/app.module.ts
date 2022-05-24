@@ -17,7 +17,6 @@ import { NavigationMenuTopComponent } from './components/navigation-menu-top/nav
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +24,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HeroDetailComponent,
     NavigationMenuTopComponent,
     MessagesComponent,
-    DashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

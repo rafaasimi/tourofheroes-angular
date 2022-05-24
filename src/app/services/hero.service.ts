@@ -18,4 +18,10 @@ export class HeroService {
 
     return heroes;
   }
+
+  getHero(id: number): Observable<IHero> {
+    const hero = HEROES.find(hero => hero.id === id)!
+    this.messageService.add(`[${getCurrentDateAndTime()}] - Loaded the hero "${hero.name} (${hero.id})"`)
+    return of(hero)
+  }
 }

@@ -11,24 +11,11 @@ import getCurrentDateAndTime from 'src/app/utils/getCurrentDateAndTime';
 })
 export class HeroesComponent implements OnInit {
   heroesList: IHero[] = [];
-  selectedHero?: IHero;
 
-  constructor(
-    private heroService: HeroService,
-    private messageService: MessageService
-  ) {}
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.getHeroes();
-  }
-
-  onSelect(hero: IHero): void {
-    this.selectedHero = hero;
-    this.messageService.add(
-      `[${getCurrentDateAndTime()}] - The hero "${hero.name} (${
-        hero.id
-      })" has been selected.`
-    );
   }
 
   getHeroes(): void {
