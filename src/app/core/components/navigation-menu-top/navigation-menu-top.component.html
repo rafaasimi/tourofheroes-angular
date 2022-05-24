@@ -4,7 +4,6 @@
 
     <button *ngFor="let menuItem of menuItems" mat-icon-button [matTooltip]="menuItem.tooltipText" [aria-label]="menuItem.tooltipText" [routerLink]="[menuItem.routerLink]">
         <mat-icon>{{menuItem.icon}}</mat-icon>
-        <p>{{menuItem.routerLink}}</p>
     </button>
 
 </mat-toolbar>

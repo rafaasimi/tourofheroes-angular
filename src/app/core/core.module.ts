@@ -3,7 +3,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NavigationMenuTopComponent } from './components/navigation-menu-top/navigation-menu-top.component';
 
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 
 const COMPONENTS = [MessagesComponent, NavigationMenuTopComponent];
