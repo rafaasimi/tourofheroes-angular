@@ -10,6 +10,7 @@ import getCurrentDateAndTime from 'src/app/utils/getCurrentDateAndTime';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
+  tableDisplayedColumns: string[] = ['id', 'name']
   heroesList: IHero[] = [];
 
   constructor(private heroService: HeroService) {}

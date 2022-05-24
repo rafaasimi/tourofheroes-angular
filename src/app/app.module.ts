@@ -2,12 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatCardModule } from '@angular/material/card';
+import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
@@ -24,18 +19,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HeroDetailComponent,
     NavigationMenuTopComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatCardModule,
+    MaterialModule,
     AppRoutingModule,
   ],
   providers: [],
