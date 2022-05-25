@@ -6,10 +6,7 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
-
-
-import { DashboardModule } from './modules/dashboard/dashboard.module';
-import { HeroesModule } from './modules/heroes/heroes.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,6 +14,7 @@ import { HeroesModule } from './modules/heroes/heroes.module';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     // App
     AppRoutingModule,
