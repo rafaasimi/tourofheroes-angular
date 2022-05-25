@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
+// Como estamos usando Lazy Module
+// não colocamos "dashboard" nas routes
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: DashboardComponent },
 ];
 
 @NgModule({

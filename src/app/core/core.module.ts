@@ -5,8 +5,13 @@ import { NavigationMenuTopComponent } from './components/navigation-menu-top/nav
 
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-const COMPONENTS = [MessagesComponent, NavigationMenuTopComponent];
+const COMPONENTS = [
+  MessagesComponent,
+  NavigationMenuTopComponent,
+  PageNotFoundComponent,
+];
 
 const MODULES = [MaterialModule, RouterModule];
 
