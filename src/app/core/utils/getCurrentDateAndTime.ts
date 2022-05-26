@@ -1,7 +1,7 @@
 export default function getCurrentDateAndTime() {
-  const currentDateAndTime = `${new Date().getDate()}/${
-    new Date().getMonth() + 1
-  }/${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
+  
+  let formatedDate = new Date().toLocaleDateString('pt-BR')
+  let formatedTime = new Date().toLocaleTimeString('pt-BR')
 
-  return currentDateAndTime;
+  return `${formatedDate} ${formatedTime}`;
 }
