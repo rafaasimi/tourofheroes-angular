@@ -59,6 +59,13 @@ export class HeroService {
     return hero;
   }
 
+  // PUT /heroes/id
+  updateHero(hero: IHero): Observable<IHero> {
+    return this.http.put<IHero>(`${this.heroesUrl}/${hero.id}`, hero).pipe(
+      tap((hero) => this.messageLog(`The hero "${hero.name} (ID: ${hero.id})" was changed.`))
+    );
+  }
+
   private messageLog(message: string) {
     this.messageService.add(`[${getCurrentDateAndTime()}] - ${message}`);
   }

@@ -28,7 +28,17 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
   }
 
+  saveHero(): void {
+    this.heroService
+      .updateHero(this.hero)
+      .subscribe(() => this.returnPreviousPage());
+  }
+
   returnPreviousPage(): void {
     this.location.back();
+  }
+
+  isFormValid(): boolean {
+    return !!this.hero.name.trim();
   }
 }
