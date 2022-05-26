@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { HEROES } from '../mocks/mock-heroes';
 import IHero from '../models/heroes.model';
 import getCurrentDateAndTime from '../utils/getCurrentDateAndTime';
+import { LoadingService } from './loading.service';
 import { MessageService } from './message.service';
 
 @Injectable({
@@ -14,11 +15,14 @@ import { MessageService } from './message.service';
 export class HeroService {
   private heroesUrl = `${environment.baseUrl}/heroes`;
 
+  loadingComponent = true;
+
   constructor(
     private messageService: MessageService,
     private http: HttpClient
   ) {}
 
+  // GET /heroes
   getHeroes(): Observable<IHero[]> {
     // Consome os Herois do Mock
     // const heroes = of(HEROES);
@@ -37,6 +41,7 @@ export class HeroService {
     return heroes;
   }
 
+  // GET /heroes/id
   getHero(id: number): Observable<IHero> {
     // Consome os Herois do Mock
     // const hero = HEROES.find((hero) => hero.id === id)!;

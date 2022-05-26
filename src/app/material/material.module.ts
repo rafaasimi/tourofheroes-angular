@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const MATERIAL_MODULES = [
   MatToolbarModule,
@@ -20,12 +21,12 @@ const MATERIAL_MODULES = [
   MatListModule,
   MatInputModule,
   MatTableModule,
-]
+  MatProgressSpinnerModule,
+];
 
 @NgModule({
   declarations: [],
   imports: [MATERIAL_MODULES],
-  exports: [MATERIAL_MODULES]
+  exports: [MATERIAL_MODULES],
 })
-export class MaterialModule { }
-
+export class MaterialModule {}
