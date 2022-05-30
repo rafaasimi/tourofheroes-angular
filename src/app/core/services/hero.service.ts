@@ -61,9 +61,28 @@ export class HeroService {
 
   // PUT /heroes/id
   updateHero(hero: IHero): Observable<IHero> {
-    return this.http.put<IHero>(`${this.heroesUrl}/${hero.id}`, hero).pipe(
-      tap((hero) => this.messageLog(`The hero "${hero.name} (ID: ${hero.id})" was changed.`))
-    );
+    return this.http
+      .put<IHero>(`${this.heroesUrl}/${hero.id}`, hero)
+      .pipe(
+        tap((hero) =>
+          this.messageLog(
+            `The hero "${hero.name} (ID: ${hero.id})" was changed.`
+          )
+        )
+      );
+  }
+
+  // POST /heroes
+  createHero(hero: IHero): Observable<IHero> {
+    return this.http
+      .post<IHero>(this.heroesUrl, hero)
+      .pipe(
+        tap((hero) =>
+          this.messageLog(
+            `The hero "${hero.name} (ID: ${hero.id})" was created.`
+          )
+        )
+      );
   }
 
   private messageLog(message: string) {
