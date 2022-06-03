@@ -74,6 +74,7 @@ export class HeroService {
 
   // POST /heroes
   createHero(hero: IHero): Observable<IHero> {
+    
     return this.http
       .post<IHero>(this.heroesUrl, hero)
       .pipe(
@@ -83,6 +84,13 @@ export class HeroService {
           )
         )
       );
+  }
+
+  // DELETE /heroes/id
+  deleteHero(hero: IHero): Observable<any> {
+    return this.http.delete<any>(`${this.heroesUrl}/${hero.id}`).pipe(
+      tap(() => this.messageLog(`The hero "${hero.name} (ID: ${hero.id})" was deleted.`))
+    )
   }
 
   private messageLog(message: string) {

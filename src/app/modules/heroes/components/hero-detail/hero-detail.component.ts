@@ -69,12 +69,13 @@ export class HeroDetailComponent implements OnInit {
 
     if (valid) {
       const hero: IHero = {
-        name: value.name,
+        name: value.nameHero,
       } as IHero;
 
       this.heroService
         .createHero(hero)
         .subscribe(() => this.returnPreviousPage());
+        
     } else {
       this.showErrorMessage();
     }

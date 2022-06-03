@@ -1,18 +1,29 @@
 .heroes-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 
-    h1 {
-        margin: 0;
-    }
+  h1 {
+    margin: 0;
+  }
 }
 
 mat-row {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        filter: brightness(0.95);
-    }
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+button.delete-icon {
+  mat-icon {
+    color: #f44336;
+  }
+}
+
+.mat-column-id,
+.mat-column-actions {
+  max-width: 80px;
 }

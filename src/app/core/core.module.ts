@@ -12,12 +12,14 @@ import { LoadingComponent } from './components/loading/loading.component';
 
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 const COMPONENTS = [
   MessagesComponent,
   NavigationMenuTopComponent,
   PageNotFoundComponent,
   LoadingComponent,
+  ConfirmationDialogComponent,
 ];
 
 const MODULES = [MaterialModule, RouterModule];
