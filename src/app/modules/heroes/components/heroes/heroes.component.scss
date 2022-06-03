@@ -23,7 +23,26 @@ button.delete-icon {
   }
 }
 
-.mat-column-id,
-.mat-column-actions {
+button.edit-icon {
+  mat-icon {
+    color: #f25f00;
+  }
+}
+
+button.delete-icon,
+button.edit-icon {
+  transition: 0.3s;
+}
+
+button.delete-icon:hover,
+button.edit-icon:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.mat-column-id {
   max-width: 80px;
+}
+
+.mat-column-actions {
+  max-width: 100px;
 }
