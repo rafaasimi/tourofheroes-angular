@@ -6,6 +6,9 @@
     </button>
 </div>
 
+<div>
+    <app-hero-search [label]="'Hero to delete'" (selectedHero)="onSelected($event)"></app-hero-search>
+</div>
 
 <mat-table [dataSource]="heroesList" class="mat-elevation-z8">
     <!-- Hero ID Definition -->

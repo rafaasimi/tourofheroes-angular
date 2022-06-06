@@ -3,10 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { HEROES } from '../mocks/mock-heroes';
 import IHero from '../models/heroes.model';
 import getCurrentDateAndTime from '../utils/getCurrentDateAndTime';
-import { LoadingService } from './loading.service';
 import { MessageService } from './message.service';
 
 @Injectable({
@@ -74,7 +72,6 @@ export class HeroService {
 
   // POST /heroes
   createHero(hero: IHero): Observable<IHero> {
-    
     return this.http
       .post<IHero>(this.heroesUrl, hero)
       .pipe(
@@ -88,9 +85,34 @@ export class HeroService {
 
   // DELETE /heroes/id
   deleteHero(hero: IHero): Observable<any> {
-    return this.http.delete<any>(`${this.heroesUrl}/${hero.id}`).pipe(
-      tap(() => this.messageLog(`The hero "${hero.name} (ID: ${hero.id})" was deleted.`))
-    )
+    return this.http
+      .delete<any>(`${this.heroesUrl}/${hero.id}`)
+      .pipe(
+        tap(() =>
+          this.messageLog(
+            `The hero "${hero.name} (ID: ${hero.id})" was deleted.`
+          )
+        )
+      );
+  }
+
+  // GET /heroes?name=term
+  searchHero(term: string): Observable<IHero[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+
+    return this.http
+      .get<IHero[]>(`${this.heroesUrl}?name=${term}`)
+      .pipe(
+        tap((heroes) =>
+          heroes.length
+            ? this.messageLog(
+                `Found (${heroes.length}) hero(es) matching "${term}"`
+              )
+            : this.messageLog(`No hero(es) matching "${term}"`)
+        )
+      );
   }
 
   private messageLog(message: string) {

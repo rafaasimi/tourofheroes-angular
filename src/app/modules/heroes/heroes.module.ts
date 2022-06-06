@@ -5,9 +5,16 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { MaterialModule } from 'src/app/material/material.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [HeroesComponent, HeroDetailComponent],
-  imports: [CommonModule, MaterialModule, HeroesRoutingModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    HeroesRoutingModule,
+    ReactiveFormsModule,
+    SharedModule,
+  ],
 })
 export class HeroesModule {}

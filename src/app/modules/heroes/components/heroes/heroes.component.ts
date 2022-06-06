@@ -59,4 +59,8 @@ export class HeroesComponent implements OnInit {
       }
     });
   }
+
+  onSelected(hero: IHero): void {
+    this.deleteHero(hero);
+  }
 }
